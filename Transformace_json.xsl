@@ -5,7 +5,7 @@
 [
 <xsl:for-each select="settings">
   <xsl:sort select="@id"/>
-  "settings": {
+  "settings": {id: <xsl:value-of select="@id"/>
   <xsl:for-each select="game">
     "game": {
       "-version": "<xsl:value-of select="@version"/>",
