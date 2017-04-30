@@ -1,0 +1,404 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+ <xs:element name="account">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="settings" maxOccurs="unbounded">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+ <xs:element name="settings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="game">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="username">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="[a-zA-Z0-9]{0,16}"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="difficulty">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="Can I play,Daddy"/>
+                    <xs:enumeration value="Don't hurt me"/>
+                    <xs:enumeration value="Bring'em on!"/>
+                    <xs:enumeration value="I am Death incarnate!"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>              
+              <xs:element name="ironman">
+                <xs:complexType>
+                  <xs:attribute type="xs:boolean" name="enabled"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="hints">
+                <xs:complexType>
+                  <xs:attribute type="xs:boolean" name="enabled"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="tutorial">
+                <xs:complexType>
+                  <xs:attribute type="xs:boolean" name="enabled"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="autosave">
+                <xs:complexType>
+                  <xs:attribute type="xs:boolean" name="enabled"/>
+                </xs:complexType>
+              </xs:element>
+             <xs:element name="ui">
+                <xs:complexType>
+                  <xs:attribute name="scale" default="1.0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:double">
+                        <xs:minInclusive value="0.5"/>
+                        <xs:maxInclusive value="2.0"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="units">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="Imperial"/>
+                    <xs:enumeration value="Metric"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="version"/>
+            <xs:attribute type="xs:boolean" name="console"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="graphics">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="display">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="resolution">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="1080p"/>
+                          <xs:enumeration value="720p"/>
+                          <xs:enumeration value="480p"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="mode">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="Fullscreen"/>
+                          <xs:enumeration value="Window"/>
+                          <xs:enumeration value="Borderless Window"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="gamma">
+                      <xs:complexType>
+                        <xs:attribute name="value" default="50">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:nonNegativeInteger">
+                              <xs:maxInclusive value="100"/>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="brightness">
+                      <xs:complexType>
+                        <xs:attribute name="value" default="50">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:nonNegativeInteger">
+                              <xs:maxInclusive value="100"/>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="colorblind_mode">
+                      <xs:complexType>
+                        <xs:attribute type="xs:boolean" name="enabled"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="vsync">
+                      <xs:complexType>
+                        <xs:attribute type="xs:boolean" name="enabled"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="texture_quality">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="High"/>
+                    <xs:enumeration value="Medium"/>
+                    <xs:enumeration value="Low"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="shadow_quality">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="High"/>
+                    <xs:enumeration value="Medium"/>
+                    <xs:enumeration value="Low"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="terrain_quality">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="High"/>
+                    <xs:enumeration value="Medium"/>
+                    <xs:enumeration value="Low"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="water_quality">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="High"/>
+                    <xs:enumeration value="Medium"/>
+                    <xs:enumeration value="Low"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="foliage_quality">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="High"/>
+                    <xs:enumeration value="Medium"/>
+                    <xs:enumeration value="Low"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="foliage_density">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="High"/>
+                    <xs:enumeration value="Medium"/>
+                    <xs:enumeration value="Low"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="draw_distance">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="High"/>
+                    <xs:enumeration value="Medium"/>
+                    <xs:enumeration value="Low"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="anti_aliasing">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="FXAA"/>
+                    <xs:enumeration value="MSAA"/>
+                    <xs:enumeration value="MLAA"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="anisotropic_filtering">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="0x"/>
+                    <xs:enumeration value="2x"/>
+                    <xs:enumeration value="4x"/>
+                    <xs:enumeration value="8x"/>
+                    <xs:enumeration value="16x"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="advanced_opengl">
+                      <xs:complexType>
+                        <xs:attribute type="xs:boolean" name="enabled"/>
+                      </xs:complexType>
+                    </xs:element>              
+              <xs:element name="motion_blur">
+                <xs:complexType>
+                  <xs:attribute type="xs:boolean" name="enabled"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="depth_of_field">
+                <xs:complexType>
+                  <xs:attribute type="xs:boolean" name="enabled"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="tessalation">
+                <xs:complexType>
+                  <xs:attribute type="xs:boolean" name="enabled"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="storm_effect">
+                <xs:complexType>
+                  <xs:attribute type="xs:boolean" name="enabled"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="heat_distortion">
+                <xs:complexType>
+                  <xs:attribute type="xs:boolean" name="enabled"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="gore_visual_allowed">
+                <xs:complexType>
+                  <xs:attribute type="xs:boolean" name="enabled"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+       <xs:element name="sound">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="volume">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="master" default="100">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:nonNegativeInteger">
+                          <xs:maxInclusive value="100"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>                    
+                    <xs:element name="speech" default="100">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:nonNegativeInteger">
+                          <xs:maxInclusive value="100"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>                    
+                    <xs:element name="music"  default="100">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:nonNegativeInteger">
+                          <xs:maxInclusive value="100"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>                    
+                    <xs:element name="ambient"  default="100">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:nonNegativeInteger">
+                          <xs:maxInclusive value="100"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>                    
+                  </xs:sequence>
+                  <xs:attribute type="xs:boolean" name="enabled"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="speech">
+                <xs:complexType>
+                  <xs:attribute name="lang">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="English"/>
+                          <xs:enumeration value="German"/>
+                          <xs:enumeration value="French"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="subtitles">
+                <xs:complexType>
+                  <xs:attribute name="lang">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="English"/>
+                        <xs:enumeration value="German"/>
+                        <xs:enumeration value="French"/>
+                        <xs:enumeration value="Czech"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute type="xs:boolean" name="enabled"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="controls">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="input" default="Keyboard and Mouse">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="Keyboard and Mouse"/>
+                    <xs:enumeration value="X360 Controller"/>
+                    <xs:enumeration value="Dualshock 4"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sensitivity" default="50">
+                <xs:simpleType>
+                  <xs:restriction base="xs:nonNegativeInteger">
+                    <xs:maxInclusive value="100"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="inverted_mouse">
+                <xs:complexType>
+                  <xs:attribute type="xs:boolean" name="horizontal"/>
+                  <xs:attribute type="xs:boolean" name="vertical"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="misc">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="show_target_of_target">
+                <xs:complexType>
+                  <xs:attribute type="xs:boolean" name="enabled"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="show_target_castbar">
+                <xs:complexType>
+                  <xs:attribute type="xs:boolean" name="enabled"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="lock_action_bars">
+                <xs:complexType>
+                  <xs:attribute type="xs:boolean" name="enabled"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="map_enabled">
+                <xs:complexType>
+                  <xs:attribute type="xs:boolean" name="enabled"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="show_cape">
+                <xs:complexType>
+                  <xs:attribute type="xs:boolean" name="enabled"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="show_head">
+                <xs:complexType>
+                  <xs:attribute type="xs:boolean" name="enabled"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="highlight_new_items">
+                <xs:complexType>
+                  <xs:attribute type="xs:boolean" name="enabled"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    <xs:attribute name="id" type="xs:positiveInteger" use="required" />
+    </xs:complexType>
+    <xs:unique name="unique-id">
+         <xs:selector xpath="settings" />
+         <xs:field xpath="@id" />
+      </xs:unique>
+  </xs:element>
+</xs:schema>

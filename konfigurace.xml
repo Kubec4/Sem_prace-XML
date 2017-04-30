@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<account>
+<settings id="1">
+	<game version="1.1.0" console="false">
+		<username>Testuser1</username>
+		<difficulty>Can I play,Daddy</difficulty>
+		<ironman enabled="true" />
+		<hints enabled="true" />
+		<tutorial enabled="true"/>
+		<autosave enabled="true"/>
+		<ui scale="1.0" />
+		<units>Imperial</units>
+	</game>
+	<graphics>
+		<display>
+			<resolution>1080p</resolution>
+			<mode>Fullscreen</mode>
+			<gamma value="33"/>
+			<brightness value="33"/>
+			<colorblind_mode enabled="false"/>
+			<vsync enabled="true"/>
+		</display>
+		<texture_quality>High</texture_quality>
+		<shadow_quality>High</shadow_quality>
+		<terrain_quality>Medium</terrain_quality>
+		<water_quality>High</water_quality>
+		<foliage_quality>High</foliage_quality>
+		<foliage_density>Low</foliage_density>
+		<draw_distance>High</draw_distance>
+		<anti_aliasing>FXAA</anti_aliasing>
+		<anisotropic_filtering>8x</anisotropic_filtering>
+		<advanced_opengl enabled="true"/>
+		<motion_blur enabled="false" />
+		<depth_of_field enabled="false" />
+		<tessalation enabled="true" />
+		<storm_effect enabled="true"/>
+		<heat_distortion enabled="true"/>
+		<gore_visual_allowed enabled="true"/>
+	</graphics>
+	<sound>
+		<volume enabled="true">
+			<master>33</master>
+			<speech>33</speech>
+			<music>33</music>
+			<ambient>33</ambient>
+		</volume>
+		<speech lang="English" />
+		<subtitles lang="Czech" enabled="true" />
+	</sound>
+	<controls>
+		<input>Keyboard and Mouse</input>
+		<sensitivity>33</sensitivity>
+		<inverted_mouse horizontal="false" vertical="false" />
+	</controls>
+	<misc>
+		<show_target_of_target enabled="true" />
+		<show_target_castbar enabled="true" />
+		<lock_action_bars enabled="true" />
+		<map_enabled enabled="true" />
+		<show_cape enabled="true" />
+		<show_head enabled="true" />
+		<highlight_new_items enabled="true" />
+	</misc>
+</settings>
+<settings id="2">
+	<game version="1.1.0" console="true">
+		<username>Testuser2</username>
+		<difficulty>Can I play,Daddy</difficulty>
+		<ironman enabled="true" />
+		<hints enabled="true" />
+		<tutorial enabled="true"/>
+		<autosave enabled="true"/>
+		<ui scale="1.0" />
+		<units>Metric</units>
+	</game>
+	<graphics>
+		<display>
+			<resolution>1080p</resolution>
+			<mode>Fullscreen</mode>
+			<gamma value="50"/>
+			<brightness value="33"/>
+			<colorblind_mode enabled="true"/>
+			<vsync enabled="true"/>
+		</display>
+		<texture_quality>Medium</texture_quality>
+		<shadow_quality>High</shadow_quality>
+		<terrain_quality>Medium</terrain_quality>
+		<water_quality>Low</water_quality>
+		<foliage_quality>High</foliage_quality>
+		<foliage_density>Low</foliage_density>
+		<draw_distance>Medium</draw_distance>
+		<anti_aliasing>FXAA</anti_aliasing>
+		<anisotropic_filtering>16x</anisotropic_filtering>
+		<advanced_opengl enabled="true"/>
+		<motion_blur enabled="false" />
+		<depth_of_field enabled="false" />
+		<tessalation enabled="true" />
+		<storm_effect enabled="true"/>
+		<heat_distortion enabled="true"/>
+		<gore_visual_allowed enabled="false"/>
+	</graphics>
+	<sound>
+		<volume enabled="true">
+			<master>33</master>
+			<speech>33</speech>
+			<music>33</music>
+			<ambient>33</ambient>
+		</volume>
+		<speech lang="English" />
+		<subtitles lang="English" enabled="true" />
+	</sound>
+	<controls>
+		<input>Keyboard and Mouse</input>
+		<sensitivity>33</sensitivity>
+		<inverted_mouse horizontal="false" vertical="false" />
+	</controls>
+	<misc>
+		<show_target_of_target enabled="false" />
+		<show_target_castbar enabled="false" />
+		<lock_action_bars enabled="true" />
+		<map_enabled enabled="false" />
+		<show_cape enabled="true" />
+		<show_head enabled="false" />
+		<highlight_new_items enabled="true" />
+	</misc>
+</settings>
+<settings id="3">
+	<game version="1.1.0" console="false">
+		<username>Testuser3</username>
+		<difficulty>Bring'em on!</difficulty>
+		<ironman enabled="false" />
+		<hints enabled="false" />
+		<tutorial enabled="true"/>
+		<autosave enabled="true"/>
+		<ui scale="1.0" />
+		<units>Imperial</units>
+	</game>
+	<graphics>
+		<display>
+			<resolution>1080p</resolution>
+			<mode>Fullscreen</mode>
+			<gamma value="33"/>
+			<brightness value="33"/>
+			<colorblind_mode enabled="false"/>
+			<vsync enabled="false"/>
+		</display>
+		<texture_quality>High</texture_quality>
+		<shadow_quality>High</shadow_quality>
+		<terrain_quality>High</terrain_quality>
+		<water_quality>High</water_quality>
+		<foliage_quality>High</foliage_quality>
+		<foliage_density>High</foliage_density>
+		<draw_distance>High</draw_distance>
+		<anti_aliasing>FXAA</anti_aliasing>
+		<anisotropic_filtering>8x</anisotropic_filtering>
+		<advanced_opengl enabled="true"/>
+		<motion_blur enabled="false" />
+		<depth_of_field enabled="false" />
+		<tessalation enabled="false" />
+		<storm_effect enabled="true"/>
+		<heat_distortion enabled="true"/>
+		<gore_visual_allowed enabled="true"/>
+	</graphics>
+	<sound>
+		<volume enabled="true">
+			<master>33</master>
+			<speech>33</speech>
+			<music>33</music>
+			<ambient>33</ambient>
+		</volume>
+		<speech lang="English" />
+		<subtitles lang="Czech" enabled="true" />
+	</sound>
+	<controls>
+		<input>Keyboard and Mouse</input>
+		<sensitivity>33</sensitivity>
+		<inverted_mouse horizontal="false" vertical="false" />
+	</controls>
+	<misc>
+		<show_target_of_target enabled="true" />
+		<show_target_castbar enabled="true" />
+		<lock_action_bars enabled="true" />
+		<map_enabled enabled="true" />
+		<show_cape enabled="true" />
+		<show_head enabled="true" />
+		<highlight_new_items enabled="true" />
+	</misc>
+</settings>
+<settings id="4">
+	<game version="1.1.0" console="false">
+		<username>Testuser4</username>
+		<difficulty>I am Death incarnate!</difficulty>
+		<ironman enabled="false" />
+		<hints enabled="false" />
+		<tutorial enabled="false"/>
+		<autosave enabled="false"/>
+		<ui scale="1.0" />
+		<units>Metric</units>
+	</game>
+	<graphics>
+		<display>
+			<resolution>1080p</resolution>
+			<mode>Fullscreen</mode>
+			<gamma value="33"/>
+			<brightness value="33"/>
+			<colorblind_mode enabled="false"/>
+			<vsync enabled="true"/>
+		</display>
+		<texture_quality>High</texture_quality>
+		<shadow_quality>High</shadow_quality>
+		<terrain_quality>Medium</terrain_quality>
+		<water_quality>High</water_quality>
+		<foliage_quality>High</foliage_quality>
+		<foliage_density>Low</foliage_density>
+		<draw_distance>High</draw_distance>
+		<anti_aliasing>FXAA</anti_aliasing>
+		<anisotropic_filtering>8x</anisotropic_filtering>
+		<advanced_opengl enabled="true"/>
+		<motion_blur enabled="false" />
+		<depth_of_field enabled="false" />
+		<tessalation enabled="true" />
+		<storm_effect enabled="true"/>
+		<heat_distortion enabled="true"/>
+		<gore_visual_allowed enabled="true"/>
+	</graphics>
+	<sound>
+		<volume enabled="true">
+			<master>33</master>
+			<speech>33</speech>
+			<music>33</music>
+			<ambient>33</ambient>
+		</volume>
+		<speech lang="English" />
+		<subtitles lang="Czech" enabled="true" />
+	</sound>
+	<controls>
+		<input>Keyboard and Mouse</input>
+		<sensitivity>33</sensitivity>
+		<inverted_mouse horizontal="false" vertical="false" />
+	</controls>
+	<misc>
+		<show_target_of_target enabled="false" />
+		<show_target_castbar enabled="false" />
+		<lock_action_bars enabled="false" />
+		<map_enabled enabled="false" />
+		<show_cape enabled="true" />
+		<show_head enabled="true" />
+		<highlight_new_items enabled="false" />
+	</misc>
+</settings>
+<settings id="5">
+	<game version="1.1.0" console="false">
+		<username>Testuser5</username>
+		<difficulty>Don't hurt me</difficulty>
+		<ironman enabled="false" />
+		<hints enabled="true" />
+		<tutorial enabled="true"/>
+		<autosave enabled="true"/>
+		<ui scale="1.0" />
+		<units>Imperial</units>
+	</game>
+	<graphics>
+		<display>
+			<resolution>1080p</resolution>
+			<mode>Fullscreen</mode>
+			<gamma value="33"/>
+			<brightness value="33"/>
+			<colorblind_mode enabled="false"/>
+			<vsync enabled="true"/>
+		</display>
+		<texture_quality>High</texture_quality>
+		<shadow_quality>High</shadow_quality>
+		<terrain_quality>Medium</terrain_quality>
+		<water_quality>High</water_quality>
+		<foliage_quality>High</foliage_quality>
+		<foliage_density>Low</foliage_density>
+		<draw_distance>High</draw_distance>
+		<anti_aliasing>FXAA</anti_aliasing>
+		<anisotropic_filtering>8x</anisotropic_filtering>
+		<advanced_opengl enabled="true"/>
+		<motion_blur enabled="false" />
+		<depth_of_field enabled="false" />
+		<tessalation enabled="true" />
+		<storm_effect enabled="true"/>
+		<heat_distortion enabled="true"/>
+		<gore_visual_allowed enabled="true"/>
+	</graphics>
+	<sound>
+		<volume enabled="true">
+			<master>33</master>
+			<speech>33</speech>
+			<music>33</music>
+			<ambient>33</ambient>
+		</volume>
+		<speech lang="English" />
+		<subtitles lang="Czech" enabled="true" />
+	</sound>
+	<controls>
+		<input>Keyboard and Mouse</input>
+		<sensitivity>33</sensitivity>
+		<inverted_mouse horizontal="false" vertical="false" />
+	</controls>
+	<misc>
+		<show_target_of_target enabled="false" />
+		<show_target_castbar enabled="false" />
+		<lock_action_bars enabled="true" />
+		<map_enabled enabled="true" />
+		<show_cape enabled="false" />
+		<show_head enabled="false" />
+		<highlight_new_items enabled="true" />
+	</misc>
+</settings>
+</account>
