@@ -1,2 +1,2 @@
-# Sem_prace-XML
-Semestrální práce- Nastavení aplikace v XML
+# Sem_prace-ZJ
+Semestrální práce - Značkovací Jazyky ; Téma: Popis bakalářské práce
