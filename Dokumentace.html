@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<title>Dokumentace semestrální práce z předmětu Značkovací jazyky</title>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href="CSS.css" type="text/css" />
+</head>
+<body>
+		<header>
+			<h1>Dokumentace semestrální práce z předmětu Značkovací jazyky</h1>
+		</header>
+		
+		<nav id="nav">
+			<h2>Obsah</h2>
+			<ul>
+				<li><a href="#nav">				Obsah s odkazy </a></li>
+				<li><a href="#introduction">	Úvod</a></li>				
+				<li><a href="#BCPrace">			Popis bakalářské práce</a></li>
+				<li><a href="#methodology">		Metodika</a></li>
+				<li><a href="#element_desc">	Popis elementů a atributů</a></li>
+				<li><a href="#transform_desc">	Popis transformace</a></li>
+				<li><a href="#summary">			Závěr</a></li>
+				<li><a href="#footer">			Zápatí</a></li>
+			</ul>
+		</nav>
+<main> 
+			<article>
+				<section id="introduction">
+					<h2>Úvod</h2>
+					<p>
+						Semestrální práce z předmětu Značkovací jazyky se zabývá tvorbou XML dokumentu uchovávájící různá data o uživatelech informačního systemu pro malou obec. Součástí je také tvorba XSD schéma, XSL transformace do HTML a tato dokumentace. Dokument byl tvořen pro informační systém pro malou obec.
+					</p>
+				</section>
+				<section id="BCPrace">
+					<h2>Popis bakalářské práce</h2>
+					<h3>Cíle práce:</h3><p>	Cílem práce je navrhnout, vytvořit a otestovat informační systém malé obce s méně než 1000 obyvateli ve Středočeském kraji. Systém bude dostupný z běžného programového vybavení na internetu a bude rozlišovat několik úrovní přístupu k informacím: 1) široká veřejnost, 2) pod heslem občan obce, 3) pod heslem člen zastupitelstva obce, 4)moderátor, 5) administrátor. Systém by měl kromě jiného nahradit zákonem danou vyhlášku a veřejnou nástěnku.
+					</p>
+					<h3>Metodika:</h3><p>	Nejprve bude úprovedena analýza stávající infrastruktury v obci a přehled dostupných nástrojů pro vytvoření požadovaného systému. Potom na základě analýzy bude proveden návrh, implemetace a testování.
+					</p>
+					<h3>Popis praktické části</h3><p>Nejprve se udělá analýza stávající infrastruktury. Vytvoří se první model informačního systému, který se bude dále upravovat pro zisk dalších a lepších verzí informačního systému. Model bude obsahovat informace o občanech, který si v informačním systému vytvoří účet, pro obyvatele dané obce bude účet automaticky předem vytvořen. Pro testování modelu informačního systému bude vytvořeno několik testovacích účtů pro jednotlivé úrovně přístupů, poté budou vytvořeni první pilotní účty fiktivních obyvatel a po dokončení testování se informační systém spustí. </p>
+				</section>       
+				
+				<section id="methodology">
+					<h2>Metodika</h2>
+					<p>
+						Nejprve byl vytvořen hrubý XML dokument se jmény elementů a atributů. Poté byl ručně vytvořen XSD dokument s restrikcemi na datové typy a také byla úpravena celková struktura dokumentu do finální podoby. 
+					</p>
+					<p>
+						Validita těchto dvou dokumentů byla kontrolována pomocí <a href="http://www.utilities-online.info/xsdvalidation/">webového validátoru, při téměř každé úpravě </a>. Zároveň bylo zkontrolováno, že XML dokument odpovídá XSD schématu a je "Well Formed" a validní.
+					</p>
+
+					<p>
+						Pro XSL transformaci do HTML bylo nejprve určeno co se pro HTML dokument vytáhne z XML souboru. Data, která se z XML vytáhnou jsou: Jméno uživatele, zařazení do skupiny, politická příslušnost, telefoní číslo, adresa a rodné číslo. Poté byla transformace ručně napsána a připojena k XML souboru.
+					</p>
+
+					<p>
+						Celý projekt byl nahrán na <a href="https://github.com/Kubec4/Sem_prace-XML">GitHub</a>.
+					</p>
+				</section>
+				<section id="element_desc">
+					<h2>Popis elementů a atributů</h2>
+
+					<table id="t01" border="1">
+						<tr>
+							<th>Adresa elementu/atributu</th>
+							<th>Popis</th>
+						</tr>
+						<tr>
+							<td>account/@id</td>
+							<td>Attribut- Id účtu</td>
+						</tr>
+
+						<tr>
+							<td>account/acc_info</td>
+							<td>Komplexní element uchovávající informace o účtu</td>
+						</tr>
+						<tr>
+							<td>account/acc_info/acc_name</td>
+							<td>Jméno účtu</td>
+						</tr>
+						<tr>
+							<td>account/acc_info/acc_email</td>
+							<td>Název emailu přiřazeného k účtu</td>
+						</tr>
+						<tr>
+							<td>account/acc_info/acc_status</td>
+							<td>Komplexní element obsahující aktuální stav účtu</td>
+						</tr>
+						<tr>
+							<td>account/acc_info/acc_status/@isSuspended</td>
+							<td>Attribut- Informace o tom zda-li je účet zablokován</td>
+						</tr>
+						<tr>
+							<td>account/acc_info/acc_status/password_duration</td>
+							<td>Počet dní kdy vyprší platnost hesla</td>
+						</tr>
+						<tr>
+							<td>account/acc_info/acc_status/password_duration/@isExpired</td>
+							<td>Attribut- Obsahuje informaci o tom zda-li je heslo propadlé</td>
+						</tr>
+						<tr>
+							<td>account/acc_info/acc_status/password_status</td>
+							<td>Aktuální stav hesla</td>
+						</tr>
+						<tr>
+							<td>account/acc_info/acc_status/password_status/@isLocked</td>
+							<td>Attribut- Obsahuje informaci o tom zda-li je heslo uzamklé</td>
+						</tr>
+						<tr>
+							<td>account/acc_info/acc_status/date_of_last_password_change</td>
+							<td>Datum poslední změny hesla</td>
+						</tr>
+						<tr>
+							<td>account/acc_info/acc_status/current_failed_logon_attempts</td>
+							<td>Počet aktuálních nevydařených přihlášení</td>
+						</tr>
+						<tr>
+							<td>account/acc_info/acc_status/last_login</td>
+							<td>Datum posledního přihlášení </td>
+						</tr>
+						<tr>
+							<td>account/acc_info/acc_status/last_failed_login</td>
+							<td>Datum posledního neúspěšného přihlášení</td>
+						</tr>
+						<tr>
+							<td>account/acc_info/acc_type</td>
+							<td>Informace o přiřazené skupině</td>
+						</tr>
+						<tr>
+							<td>account/acc_info/acc_type/group</td>
+							<td>Název skupiny</td>
+						</tr>
+						<tr>
+							<td>account/acc_info/acc_type/level_of_access</td>
+							<td>Úroveň přístupu do systému</td>
+						</tr>
+						<tr>
+							<td>account/acc_info/acc_type/level_of_access/@modify</td>
+							<td>Attribut- Možnost upravovat příspěvky</td>
+						</tr>
+						<tr>
+							<td>account/acc_info/acc_type/level_of_access/@delete</td>
+							<td>Attribut- Možnost odstraňovat příspěvky</td>
+						</tr>
+						<tr>
+							<td>account/acc_info/acc_type/level_of_access/@create</td>
+							<td>Attribut- Možnost vytvářet přispěvky</td>
+						</tr>
+						<tr>
+							<td>account/person_info</td>
+							<td>Komplexní element uchovávající informace o uživateli</td>
+						</tr>
+						<tr>
+							<td>account/person_info/displayable_data</td>
+							<td>Data, která lze zveřejnit</td>
+						</tr>
+						<tr>
+							<td>account/person_info/displayable_data/first_name</td>
+							<td>Křestní jméno uživatele</td>
+						</tr>
+						<tr>
+							<td>account/person_info/displayable_data/middle_name</td>
+							<td>Prostřední jméno uživatele</td>
+						</tr>
+						<tr>
+							<td>account/person_info/displayable_data/middle_name@exist</td>
+							<td>Attribut- Ověřuje zda prostřední jméno existuje</td>
+						</tr>
+						<tr>
+							<td>account/person_info/displayable_data/second_name</td>
+							<td>Přijmení uživatele</td>
+						</tr>
+						<tr>
+							<td>account/person_info/displayable_data/political_affection</td>
+							<td>Politická náklonost uživatele</td>
+						</tr>
+						<tr>
+							<td>account/person_info/displayable_data/political_affection/@AgreedByUser</td>
+							<td>Attribut- Souhlas uživatele o zveřejnění jeho pol. náklonosti</td>
+						</tr>
+
+						<tr>
+							<td>account/person_info/not_displayable_data</td>
+							<td>Data, která nelze zveřejnit</td>
+						</tr>
+						<tr>
+							<td>account/person_info/not_displayable_data/sex</td>
+							<td>Pohlaví uživatele</td>
+						</tr>
+						<tr>
+							<td>account/person_info/not_displayable_data/nationality</td>
+							<td>Národnost uživatele</td>
+						</tr>
+						<tr>
+							<td>account/person_info/not_displayable_data/birthplace</td>
+							<td>Místo narození</td>
+						</tr>
+						<tr>
+							<td>account/person_info/not_displayable_data/birth_date</td>
+							<td>Datum narození uživatele</td>
+						</tr>
+						<tr>
+							<td>account/person_info/not_displayable_data/birth_date/day</td>
+							<td>Den narození</td>
+						</tr>
+						<tr>
+							<td>account/person_info/not_displayable_data/birth_date/month</td>
+							<td>Měsíc narození</td>
+						</tr>
+						<tr>
+							<td>account/person_info/not_displayable_data/birth_date/year</td>
+							<td>Rok narození</td>
+						</tr>
+						<tr>
+							<td>account/person_info/not_displayable_data/age</td>
+							<td>Věk uživatele</td>
+						</tr>
+						<tr>
+							<td>account/person_info/not_displayable_data/children_number</td>
+							<td>Počet dětí</td>
+						</tr>
+						<tr>
+							<td>account/person_info/not_displayable_data/marital_status</td>
+							<td>Rodinný stav</td>
+						</tr>
+						<tr>
+							<td>account/person_info/not_displayable_data/personal_number</td>
+							<td>Rodné číslo uživatele</td>
+						</tr>
+						<tr>
+							<td>account/person_info/not_displayable_data/personal_number/pn_part1</td>
+							<td>Datumová část rodného čísla</td>
+						</tr>
+						<tr>
+							<td>account/person_info/not_displayable_data/personal_number/pn_part2</td>
+							<td>Poslední 4-místné číslo v rodném čísle</td>
+						</tr>
+						<tr>
+							<td>account/person_info/not_displayable_data/religion</td>
+							<td>Náboženské vyznání uživatele</td>
+						</tr>
+						<tr>
+							<td>account/person_info/not_displayable_data/criminal_history</td>
+							<td>Záznam v trestním rejstříku</td>
+						</tr>
+						<tr>
+							<td>account/contact_info</td>
+							<td>Kontaktní informace o uživateli</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/adress</td>
+							<td>Adresa uživatele</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/adress/state</td>
+							<td>Stát</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/adress/region</td>
+							<td>Kraj</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/adress/district</td>
+							<td>Okres</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/adress/town</td>
+							<td>Město</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/adress/street</td>
+							<td>Ulice</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/adress/house_number</td>
+							<td>Číslo popisné</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/adress/zip_code</td>
+							<td>Poštovní směrovací číslo</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/phone_number</td>
+							<td>Telefoní číslo</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/phone_number/@preselection</td>
+							<td>Předvolba tel. čísla</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/personal_email</td>
+							<td>Osobní email uživatele</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/personal_email/@sentNotification</td>
+							<td>Attribut- Obsahuje informaci zda-li má systém posílat emaily na os.účet uživatele</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/fax</td>
+							<td>Fax</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/social_profiles_URLs</td>
+							<td>Element obsahující odkazy na profil uživatele na různých sociálních sítích</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/social_profiles_URLs/facebook</td>
+							<td>Odkaz na Facebook</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/social_profiles_URLs/twitter</td>
+							<td>Odkaz na Twitter</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/social_profiles_URLs/skype</td>
+							<td>Odkaz na Skype</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/social_profiles_URLs/tumbIr</td>
+							<td>Odkaz na TumbIr</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/social_profiles_URLs/reddit</td>
+							<td>Odkaz na Reddit</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/social_profiles_URLs/whatsapp</td>
+							<td>Odkaz na Whatsapp</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/social_profiles_URLs/linkedID</td>
+							<td>Odkaz na LinkedID</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/social_profiles_URLs/google</td>
+							<td>Odkaz na Google</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/social_profiles_URLs/instagram</td>
+							<td>Odkaz na Instagram</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/social_profiles_URLs/pinterest</td>
+							<td>Odkaz na Pinterest</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/social_profiles_URLs/messenger</td>
+							<td>Odkaz na Messenger</td>
+						</tr>
+						<tr>
+							<td>account/contact_info/social_profiles_URLs/snapchat</td>
+							<td>Odkaz na Snapchat</td>
+						</tr>
+
+					</table>
+					</section>					
+					<section id="transformation_desc">
+					<h2>Popis transformace</h2>
+
+					<h3>HTML</h3>
+					<p>
+						Data z XML souboru jsou transformována do HTML dokumentu. Transformace vybere Jméno uživatele, zařazení do skupiny, politickou příslušnost, telefoní číslo, adresu a rodné číslo. To je následně uspořádáno do tabulky, kde sloupce jsou pro data a řádky pro uživatele.
+					</p>
+				</section>
+				
+				<section id="summary">
+					<h2>Závěr</h2>
+					<p>
+						Jazyk XML je používán pro strukturované ukládání dat nebo při komunikaci mezi programy. Jeho výhodou je dobrá čitelnost a šikoké možnosti filtrování a omezování dat a datovýh typů. Práce s ním je také snadná, protože k jeho editaci stačí pouze textový editor.
+					</p>
+				</section>
+			</article>
+		</main>
+		<footer id="footer">
+			<hr>
+			<table>
+				<tr>
+					<td>Autor:</td>
+					<td>Vojtěch Kubec</td>
+				</tr>
+				<tr>
+					<td>Cvičení:</td>
+					<td>Pondělí 12:15 Sudý</td>
+				</tr>
+			</table>
+		</footer>
+	</body>
+</html>

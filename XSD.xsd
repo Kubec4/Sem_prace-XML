@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="ACCs">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="account" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="account">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="acc_info"/>
+			<xs:element ref="person_info"/>
+			<xs:element ref="contact_info"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+	</xs:complexType>
+</xs:element>
+<xs:element name="acc_info">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="acc_name"/>
+			<xs:element ref="acc_email"/>
+			<xs:element ref="acc_status"/>
+			<xs:element ref="acc_type"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="acc_name">
+	<xs:simpleType>
+	<xs:restriction base="xs:string">
+	</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+<xs:element name="acc_email">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+<xs:element name="acc_status">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="password_duration"/>
+			<xs:element ref="password_status"/>
+			<xs:element ref="date_of_last_password_change"/>
+			<xs:element ref="current_failed_logon_attempts"/>
+			<xs:element ref="last_login"/>
+			<xs:element ref="last_failed_login"/>
+		</xs:sequence>
+		<xs:attribute name="isSuspended" type="xs:boolean" use="required"/>
+	</xs:complexType>
+</xs:element>
+<xs:element name="acc_type">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="group"/>
+			<xs:element ref="level_of_access"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="person_info">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="displayable_data"/>
+			<xs:element ref="not_displayable_data"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="displayable_data">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="first_name" type="xs:string"/>
+			<xs:element ref="middle_name"/>
+			<xs:element name="second_name" type="xs:string"/>
+			<xs:element ref="political_affection"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="not_displayable_data">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="sex" type="xs:string"/>
+			<xs:element name="nationality" type="xs:string"/>
+			<xs:element name="birthplace" type="xs:string"/>			
+			<xs:element ref="birth_date"/>
+			<xs:element name="age" type="xs:unsignedByte"/>
+			<xs:element name="children_number" type="xs:unsignedByte"/>
+			<xs:element name="marital_status" type="xs:string"/>			
+			<xs:element ref="personal_number"/>
+			<xs:element name="religion" type="xs:string"/>
+			<xs:element name="criminal_history" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="contact_info">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="adress"/>
+			<xs:element ref="phone_number"/>
+			<xs:element ref="personal_email"/>
+			<xs:element name="fax" type="xs:string"/>
+			<xs:element ref="social_profiles_URLs"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="adress">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="state" type="xs:string"/>
+			<xs:element name="region" type="xs:string"/>
+			<xs:element name="district" type="xs:string"/>
+			<xs:element name="town" type="xs:string"/>
+			<xs:element name="street" type="xs:string"/>
+			<xs:element name="house_number" type="xs:integer"/>
+			<xs:element name="zip_code" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="social_profiles_URLs">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element type="xs:string" name="facebook"/>
+			<xs:element type="xs:string" name="twitter"/>
+			<xs:element type="xs:string" name="skype"/>
+			<xs:element type="xs:string" name="tumbIr"/>
+			<xs:element type="xs:string" name="reddit"/>
+			<xs:element type="xs:string" name="whatsapp"/>
+			<xs:element type="xs:string" name="linkedID"/>
+			<xs:element type="xs:string" name="google"/>
+			<xs:element type="xs:string" name="instagram"/>
+			<xs:element type="xs:string" name="pinterest"/>
+			<xs:element type="xs:string" name="messenger"/>
+			<xs:element type="xs:string" name="snapchat"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="birth_date">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="day"/>
+			<xs:element ref="month"/>
+			<xs:element ref="year"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="personal_number">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="pn_part1" type="xs:integer"/>
+			<xs:element name="pn_part2" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="middle_name">
+	<xs:complexType>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+ 				<xs:attribute type="xs:boolean" name="exist" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:element>
+<xs:element name="political_affection">
+	<xs:complexType>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+ 				<xs:attribute type="xs:boolean" name="AgreedByUser" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:element>
+<xs:simpleType name="PDType">
+	<xs:restriction base="xs:integer">
+	 		<xs:minInclusive value="0"/>
+	 		<xs:maxInclusive value="150"/>
+	 	</xs:restriction>
+</xs:simpleType>
+<xs:element name="password_duration">
+<xs:complexType>
+	<xs:simpleContent>
+		<xs:extension base="PDType">
+			<xs:attribute name="isExpired" type="xs:boolean" use="required"/>
+		</xs:extension>
+	</xs:simpleContent>
+</xs:complexType>
+</xs:element>
+<xs:simpleType name="level_of_accessType">
+	<xs:restriction base="xs:integer">
+	 		<xs:minInclusive value="0"/>
+	 		<xs:maxInclusive value="4"/>
+	 	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="dayType">
+	<xs:restriction base="xs:integer">
+	 		<xs:minInclusive value="0"/>
+	 		<xs:maxInclusive value="31"/>
+	 	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="monthType">
+	<xs:restriction base="xs:integer">
+	 		<xs:minInclusive value="0"/>
+	 		<xs:maxInclusive value="12"/>
+	 	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="yearType">
+	<xs:restriction base="xs:integer">
+	 		<xs:minInclusive value="1900"/>
+	 		<xs:maxInclusive value="2200"/>
+	 	</xs:restriction>
+</xs:simpleType>
+<xs:element name="day">
+	<xs:complexType>
+		<xs:simpleContent>
+		<xs:extension base="dayType"/>
+	</xs:simpleContent>
+	</xs:complexType>
+</xs:element>
+<xs:element name="month">
+	<xs:complexType>
+		<xs:simpleContent>
+		<xs:extension base="monthType"/>
+	</xs:simpleContent>
+	</xs:complexType>
+</xs:element>
+<xs:element name="year">
+	<xs:complexType>
+		<xs:simpleContent>
+		<xs:extension base="yearType"/>
+	</xs:simpleContent>
+	</xs:complexType>
+</xs:element>
+<xs:element name="level_of_access">
+	<xs:complexType>
+	<xs:simpleContent>
+		<xs:extension base="level_of_accessType">
+			<xs:attribute name="modify" type="xs:boolean" use="required"/>
+			<xs:attribute name="delete" type="xs:boolean" use="required"/>
+			<xs:attribute name="create" type="xs:boolean" use="required"/>
+		</xs:extension>
+	</xs:simpleContent>
+</xs:complexType>
+</xs:element>
+<xs:element name="phone_number">
+	<xs:complexType>
+	<xs:simpleContent>
+		<xs:extension base="xs:string">
+			<xs:attribute name="preselection" type="xs:string" use="required"/>
+		</xs:extension>
+	</xs:simpleContent>
+</xs:complexType>
+</xs:element>
+<xs:element name="personal_email">
+	<xs:complexType>
+	<xs:simpleContent>
+		<xs:extension base="xs:string">
+			<xs:attribute name="sentNotifications" type="xs:boolean" use="required"/>
+		</xs:extension>
+	</xs:simpleContent>
+</xs:complexType>
+</xs:element>
+<xs:element name="group">
+	 <xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Admin"/>
+			<xs:enumeration value="Moderator"/>
+			<xs:enumeration value="Zastupitelstvo"/>
+			<xs:enumeration value="Obyvatel"/>
+			<xs:enumeration value="Obcan"/>
+	 </xs:restriction>
+	</xs:simpleType>
+</xs:element>
+<xs:element name="password_status">
+	<xs:complexType>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+ 				<xs:attribute type="xs:boolean" name="isLocked" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:element>
+<xs:element name="date_of_last_password_change" type="xs:date"/>
+<xs:element name="current_failed_logon_attempts" type="xs:unsignedByte"/>
+<xs:element name="last_login" type="xs:date"/>
+<xs:element name="last_failed_login" type="xs:date"/>
+</xs:schema>

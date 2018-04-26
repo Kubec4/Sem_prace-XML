@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="XSLTTransformace.xsl"?>
+
+<ACCs>
+	<account id="A0001">
+		<acc_info><!-->Informace o uctu<-->
+			<acc_name>admin.r</acc_name>
+			<acc_email>admin.r@ruda.cz</acc_email>
+			<acc_status isSuspended="false">
+				<!-->doba nez heslo propadne a acc se zablokuje<-->
+				<password_duration isExpired="false">120</password_duration>
+				<password_status isLocked="false"/>
+				<date_of_last_password_change>2018-03-10</date_of_last_password_change>
+				<current_failed_logon_attempts>0</current_failed_logon_attempts>
+				<last_login>2018-03-15</last_login>
+				<last_failed_login>2018-03-14</last_failed_login>
+				</acc_status>
+			<acc_type><!-->Skupina uctu kam uzivatel patri<-->
+				<group>Admin</group>
+				<level_of_access modify="true" delete="true" create="true">4</level_of_access>
+				</acc_type>
+		</acc_info>
+		
+		<person_info><!-->Osobni informace<-->
+			<displayable_data><!-->Data ktera lze zobrazit<-->
+				<first_name>Admin</first_name>
+				<middle_name exist="true">the</middle_name>
+				<second_name>Administrator</second_name>
+				<political_affection AgreedByUser="true">None</political_affection><!-->Vyjimka v PII<-->
+			</displayable_data>
+			<not_displayable_data><!-->data ktera neni vhodne zobrazovat<-->
+				<sex>M</sex>
+				<nationality>CZ</nationality>
+				<birthplace>Kladno</birthplace>
+				<birth_date>
+					<day>15</day>
+					<month>3</month>
+					<year>1968</year>
+					</birth_date>
+				<age>50</age>
+				<children_number>3</children_number>
+				<marital_status>Married</marital_status>
+				<personal_number>
+					<pn_part1>680315</pn_part1>
+					<pn_part2>0728</pn_part2>
+					</personal_number>
+				<religion>Ateist</religion>
+				<criminal_history>None</criminal_history>
+			</not_displayable_data>
+		</person_info>
+
+		<contact_info><!-->Kontaktni informace<-->
+			<adress>
+				<state>Ceska Republika</state>
+				<region>Stredocesky Kraj</region>
+				<district>Okres Rakovnik</district>			
+				<town>Ruda</town>
+				<street>Okruzni</street>
+				<house_number>001</house_number>
+				<zip_code>271 01</zip_code>
+				</adress>
+			<phone_number preselection="+420">724427742</phone_number>
+			<personal_email sentNotifications="false">testuser@seznam.cz</personal_email>
+			<fax>None</fax>
+			<social_profiles_URLs>
+				<facebook>none</facebook>
+				<twitter>none</twitter>
+				<skype>none</skype>
+				<tumbIr>none</tumbIr>
+				<reddit>none</reddit>
+				<whatsapp>none</whatsapp>
+				<linkedID>none</linkedID>
+				<google>none</google>
+				<instagram>none</instagram>
+				<pinterest>none</pinterest>
+				<messenger>none</messenger>
+				<snapchat>none</snapchat>
+				</social_profiles_URLs>
+		</contact_info>
+
+	</account>	
+	<account id="A0002">
+		<acc_info><!-->Informace o uctu<-->
+			<acc_name>testuser.tu2</acc_name>
+			<acc_email>test.tu2@ruda.cz</acc_email>
+			<acc_status isSuspended="false">
+				<!-->doba nez heslo propadne a acc se zablokuje<-->
+				<password_duration isExpired="false">120</password_duration>
+				<password_status isLocked="false"/>
+				<date_of_last_password_change>2018-03-10</date_of_last_password_change>
+				<current_failed_logon_attempts>0</current_failed_logon_attempts>
+				<last_login>2018-03-15</last_login>
+				<last_failed_login>2018-03-14</last_failed_login>
+				</acc_status>
+			<acc_type><!-->Skupina uctu kam uzivatel patri<-->
+				<group>Moderator</group>
+				<level_of_access modify="true" delete="true" create="true">3</level_of_access>
+				</acc_type>
+		</acc_info>
+		
+		<person_info><!-->Osobni informace<-->
+			<displayable_data><!-->Data ktera lze zobrazit<-->
+				<first_name>Test</first_name>
+				<middle_name exist="false"></middle_name>
+				<second_name>User</second_name>
+				<political_affection AgreedByUser="true">None</political_affection><!-->Vyjimka v PII<-->
+			</displayable_data>
+			<not_displayable_data><!-->data ktera neni vhodne zobrazovat<-->
+				<sex>M</sex>
+				<nationality>CZ</nationality>
+				<birthplace>Rakovnik</birthplace>
+				<birth_date>
+					<day>8</day>
+					<month>2</month>
+					<year>1979</year>
+					</birth_date>
+				<age>39</age>
+				<children_number>0</children_number>
+				<marital_status>Single</marital_status>
+				<personal_number>
+					<pn_part1>790208</pn_part1>
+					<pn_part2>0645</pn_part2>
+					</personal_number>
+				<religion>Christian</religion>
+				<criminal_history>None</criminal_history>
+			</not_displayable_data>
+		</person_info>
+
+		<contact_info><!-->Kontaktni informace<-->
+			<adress>
+				<state>Ceska Republika</state>
+				<region>Stredocesky Kraj</region>
+				<district>Okres Rakovnik</district>			
+				<town>Ruda</town>
+				<street>U obory</street>
+				<house_number>041</house_number>
+				<zip_code>271 01</zip_code>
+				</adress>
+			<phone_number preselection="+420">724427743</phone_number>
+			<personal_email sentNotifications="false">testuser2@seznam.cz</personal_email>
+			<fax>None</fax>
+			<social_profiles_URLs>
+				<facebook>none</facebook>
+				<twitter>none</twitter>
+				<skype>none</skype>
+				<tumbIr>none</tumbIr>
+				<reddit>none</reddit>
+				<whatsapp>none</whatsapp>
+				<linkedID>none</linkedID>
+				<google>none</google>
+				<instagram>none</instagram>
+				<pinterest>none</pinterest>
+				<messenger>none</messenger>
+				<snapchat>none</snapchat>
+				</social_profiles_URLs>
+		</contact_info>
+
+	</account>
+	<account id="A0003">
+		<acc_info><!-->Informace o uctu<-->
+			<acc_name>testuser.tu3</acc_name>
+			<acc_email>test.tu3@ruda.cz</acc_email>
+			<acc_status isSuspended="false">
+				<!-->doba nez heslo propadne a acc se zablokuje<-->
+				<password_duration isExpired="false">120</password_duration>
+				<password_status isLocked="false"/>
+				<date_of_last_password_change>2018-03-10</date_of_last_password_change>
+				<current_failed_logon_attempts>0</current_failed_logon_attempts>
+				<last_login>2018-03-15</last_login>
+				<last_failed_login>2018-03-14</last_failed_login>
+				</acc_status>
+			<acc_type><!-->Skupina uctu kam uzivatel patri<-->
+				<group>Zastupitelstvo</group>
+				<level_of_access modify="false" delete="false" create="true">2</level_of_access>
+				</acc_type>
+		</acc_info>
+		
+		<person_info><!-->Osobni informace<-->
+			<displayable_data><!-->Data ktera lze zobrazit<-->
+				<first_name>Test</first_name>
+				<middle_name exist="false"></middle_name>
+				<second_name>User</second_name>
+				<political_affection AgreedByUser="true">None</political_affection><!-->Vyjimka v PII<-->
+			</displayable_data>
+			<not_displayable_data><!-->data ktera neni vhodne zobrazovat<-->
+				<sex>M</sex>
+				<nationality>CZ</nationality>
+				<birthplace>Praha</birthplace>
+				<birth_date>
+					<day>16</day>
+					<month>4</month>
+					<year>1978</year>
+					</birth_date>
+				<age>40</age>
+				<children_number>1</children_number>
+				<marital_status>Single</marital_status>
+				<personal_number>
+					<pn_part1>780416</pn_part1>
+					<pn_part2>0345</pn_part2>
+					</personal_number>
+				<religion>Ateist</religion>
+				<criminal_history>None</criminal_history>
+			</not_displayable_data>
+		</person_info>
+
+		<contact_info><!-->Kontaktni informace<-->
+			<adress>
+				<state>Ceska Republika</state>
+				<region>Stredocesky Kraj</region>
+				<district>Okres Rakovnik</district>			
+				<town>Ruda</town>
+				<street>Rozcesti</street>
+				<house_number>131</house_number>
+				<zip_code>271 01</zip_code>
+				</adress>
+			<phone_number preselection="+420">724427744</phone_number>
+			<personal_email sentNotifications="false">testuser3@seznam.cz</personal_email>
+			<fax>None</fax>
+			<social_profiles_URLs>
+				<facebook>none</facebook>
+				<twitter>none</twitter>
+				<skype>none</skype>
+				<tumbIr>none</tumbIr>
+				<reddit>none</reddit>
+				<whatsapp>none</whatsapp>
+				<linkedID>none</linkedID>
+				<google>none</google>
+				<instagram>none</instagram>
+				<pinterest>none</pinterest>
+				<messenger>none</messenger>
+				<snapchat>none</snapchat>
+				</social_profiles_URLs>
+		</contact_info>
+
+	</account>	
+	<account id="A0004">
+		<acc_info><!-->Informace o uctu<-->
+			<acc_name>testuser.tu4</acc_name>
+			<acc_email>test.tu4@ruda.cz</acc_email>
+			<acc_status isSuspended="false">
+				<!-->doba nez heslo propadne a acc se zablokuje<-->
+				<password_duration isExpired="false">120</password_duration>
+				<password_status isLocked="false"/>
+				<date_of_last_password_change>2018-03-13</date_of_last_password_change>
+				<current_failed_logon_attempts>0</current_failed_logon_attempts>
+				<last_login>2018-03-15</last_login>
+				<last_failed_login>2018-04-15</last_failed_login>
+				</acc_status>
+			<acc_type><!-->Skupina uctu kam uzivatel patri<-->
+				<group>Obyvatel</group>
+				<level_of_access modify="false" delete="false" create="true">1</level_of_access>
+				</acc_type>
+		</acc_info>
+		
+		<person_info><!-->Osobni informace<-->
+			<displayable_data><!-->Data ktera lze zobrazit<-->
+				<first_name>Test</first_name>
+				<middle_name exist="false"></middle_name>
+				<second_name>User</second_name>
+				<political_affection AgreedByUser="true">None</political_affection><!-->Vyjimka v PII<-->
+			</displayable_data>
+			<not_displayable_data><!-->data ktera neni vhodne zobrazovat<-->
+				<sex>M</sex>
+				<nationality>CZ</nationality>
+				<birthplace>Rakovnik</birthplace>
+				<birth_date>
+					<day>18</day>
+					<month>12</month>
+					<year>1989</year>
+					</birth_date>
+				<age>29</age>
+				<children_number>0</children_number>
+				<marital_status>Single</marital_status>
+				<personal_number>
+					<pn_part1>891218</pn_part1>
+					<pn_part2>0673</pn_part2>
+					</personal_number>
+				<religion>Ateist</religion>
+				<criminal_history>None</criminal_history>
+			</not_displayable_data>
+		</person_info>
+
+		<contact_info><!-->Kontaktni informace<-->
+			<adress>
+				<state>Ceska Republika</state>
+				<region>Stredocesky Kraj</region>
+				<district>Okres Rakovnik</district>			
+				<town>Ruda</town>
+				<street>Okruzni</street>
+				<house_number>437</house_number>
+				<zip_code>271 01</zip_code>
+				</adress>
+			<phone_number preselection="+420">724427345</phone_number>
+			<personal_email sentNotifications="false">testuser4@seznam.cz</personal_email>
+			<fax>None</fax>
+			<social_profiles_URLs>
+				<facebook>none</facebook>
+				<twitter>none</twitter>
+				<skype>none</skype>
+				<tumbIr>none</tumbIr>
+				<reddit>none</reddit>
+				<whatsapp>none</whatsapp>
+				<linkedID>none</linkedID>
+				<google>none</google>
+				<instagram>none</instagram>
+				<pinterest>none</pinterest>
+				<messenger>none</messenger>
+				<snapchat>none</snapchat>
+				</social_profiles_URLs>
+		</contact_info>
+
+	</account>
+	<account id="A0005">
+		<acc_info><!-->Informace o uctu<-->
+			<acc_name>testuser.tu5</acc_name>
+			<acc_email>test.tu5@ruda.cz</acc_email>
+			<acc_status isSuspended="false">
+				<!-->doba nez heslo propadne a acc se zablokuje<-->
+				<password_duration isExpired="false">120</password_duration>
+				<password_status isLocked="false"/>
+				<date_of_last_password_change>2018-03-10</date_of_last_password_change>
+				<current_failed_logon_attempts>0</current_failed_logon_attempts>
+				<last_login>2018-03-15</last_login>
+				<last_failed_login>2018-03-14</last_failed_login>
+				</acc_status>
+			<acc_type><!-->Skupina uctu kam uzivatel patri<-->
+				<group>Obcan</group>
+				<level_of_access modify="false" delete="false" create="false">0</level_of_access>
+				</acc_type>
+		</acc_info>
+		
+		<person_info><!-->Osobni informace<-->
+			<displayable_data><!-->Data ktera lze zobrazit<-->
+				<first_name>Test</first_name>
+				<middle_name exist="false"></middle_name>
+				<second_name>User</second_name>
+				<political_affection AgreedByUser="true">None</political_affection><!-->Vyjimka v PII<-->
+			</displayable_data>
+			<not_displayable_data><!-->data ktera neni vhodne zobrazovat<-->
+				<sex>M</sex>
+				<nationality>CZ</nationality>
+				<birthplace>Rakovnik</birthplace>
+				<birth_date>
+					<day>16</day>
+					<month>11</month>
+					<year>1999</year>
+					</birth_date>
+				<age>19</age>
+				<children_number>0</children_number>
+				<marital_status>Single</marital_status>
+				<personal_number>
+					<pn_part1>991116</pn_part1>
+					<pn_part2>0123</pn_part2>
+					</personal_number>
+				<religion>Ateist</religion>
+				<criminal_history>None</criminal_history>
+			</not_displayable_data>
+		</person_info>
+
+		<contact_info><!-->Kontaktni informace<-->
+			<adress>
+				<state>Ceska Republika</state>
+				<region>Stredocesky Kraj</region>
+				<district>Okres Rakovnik</district>			
+				<town>Nove Straseci</town>
+				<street>Palackeho nam.</street>
+				<house_number>483</house_number>
+				<zip_code>271 01</zip_code>
+				</adress>
+			<phone_number preselection="+420">724161858</phone_number>
+			<personal_email sentNotifications="false">testuser5@seznam.cz</personal_email>
+			<fax>None</fax>
+			<social_profiles_URLs>
+				<facebook>none</facebook>
+				<twitter>none</twitter>
+				<skype>none</skype>
+				<tumbIr>none</tumbIr>
+				<reddit>none</reddit>
+				<whatsapp>none</whatsapp>
+				<linkedID>none</linkedID>
+				<google>none</google>
+				<instagram>none</instagram>
+				<pinterest>none</pinterest>
+				<messenger>none</messenger>
+				<snapchat>none</snapchat>
+				</social_profiles_URLs>
+		</contact_info>
+
+	</account>
+	<account id="A0006">
+		<acc_info><!-->Informace o uctu<-->
+			<acc_name>kubec.v</acc_name>
+			<acc_email>kubec.v@ruda.cz</acc_email>
+			<acc_status isSuspended="false">
+				<!-->doba nez heslo propadne a acc se zablokuje<-->
+				<password_duration isExpired="false">120</password_duration>
+				<password_status isLocked="false"/>
+				<date_of_last_password_change>2018-03-20</date_of_last_password_change>
+				<current_failed_logon_attempts>0</current_failed_logon_attempts>
+				<last_login>2018-04-15</last_login>
+				<last_failed_login>2018-03-21</last_failed_login>
+				</acc_status>
+			<acc_type><!-->Skupina uctu kam uzivatel patri<-->
+				<group>Obyvatel</group>
+				<level_of_access modify="false" delete="false" create="true">1</level_of_access>
+				</acc_type>
+		</acc_info>
+		
+		<person_info><!-->Osobni informace<-->
+			<displayable_data><!-->Data ktera lze zobrazit<-->
+				<first_name>Vojtech</first_name>
+				<middle_name exist="false"></middle_name>
+				<second_name>Kubec</second_name>
+				<political_affection AgreedByUser="true">None</political_affection><!-->Vyjimka v PII<-->
+			</displayable_data>
+			<not_displayable_data><!-->data ktera neni vhodne zobrazovat<-->
+				<sex>M</sex>
+				<nationality>CZ</nationality>
+				<birthplace>Kladno</birthplace>
+				<birth_date>
+					<day>15</day>
+					<month>10</month>
+					<year>1979</year>
+					</birth_date>
+				<age>39</age>
+				<children_number>0</children_number>
+				<marital_status>Single</marital_status>
+				<personal_number>
+					<pn_part1>791510</pn_part1>
+					<pn_part2>0645</pn_part2>
+					</personal_number>
+				<religion>Ateist</religion>
+				<criminal_history>None</criminal_history>
+			</not_displayable_data>
+		</person_info>
+
+		<contact_info><!-->Kontaktni informace<-->
+			<adress>
+				<state>Ceska Republika</state>
+				<region>Stredocesky Kraj</region>
+				<district>Okres Rakovnik</district>			
+				<town>Ruda</town>
+				<street>U obory</street>
+				<house_number>041</house_number>
+				<zip_code>271 01</zip_code>
+				</adress>
+			<phone_number preselection="+420">724427777</phone_number>
+			<personal_email sentNotifications="false">kubec.v@seznam.cz</personal_email>
+			<fax>None</fax>
+			<social_profiles_URLs>
+				<facebook>https://www.facebook.com/kubec.v</facebook>
+				<twitter>none</twitter>
+				<skype>none</skype>
+				<tumbIr>none</tumbIr>
+				<reddit>none</reddit>
+				<whatsapp>none</whatsapp>
+				<linkedID>none</linkedID>
+				<google>none</google>
+				<instagram>none</instagram>
+				<pinterest>none</pinterest>
+				<messenger>none</messenger>
+				<snapchat>none</snapchat>
+				</social_profiles_URLs>
+		</contact_info>
+
+	</account>
+	<account id="A0007">
+		<acc_info><!-->Informace o uctu<-->
+			<acc_name>novak.j</acc_name>
+			<acc_email>novak.j@ruda.cz</acc_email>
+			<acc_status isSuspended="false">
+				<!-->doba nez heslo propadne a acc se zablokuje<-->
+				<password_duration isExpired="false">80</password_duration>
+				<password_status isLocked="false"/>
+				<date_of_last_password_change>2018-02-10</date_of_last_password_change>
+				<current_failed_logon_attempts>0</current_failed_logon_attempts>
+				<last_login>2018-03-15</last_login>
+				<last_failed_login>2018-02-15</last_failed_login>
+				</acc_status>
+			<acc_type><!-->Skupina uctu kam uzivatel patri<-->
+				<group>Obcan</group>
+				<level_of_access modify="false" delete="false" create="false">0</level_of_access>
+				</acc_type>
+		</acc_info>
+		
+		<person_info><!-->Osobni informace<-->
+			<displayable_data><!-->Data ktera lze zobrazit<-->
+				<first_name>Jan</first_name>
+				<middle_name exist="false"></middle_name>
+				<second_name>Novak</second_name>
+				<political_affection AgreedByUser="false">n/a</political_affection><!-->Vyjimka v PII<-->
+			</displayable_data>
+			<not_displayable_data><!-->data ktera neni vhodne zobrazovat<-->
+				<sex>M</sex>
+				<nationality>CZ</nationality>
+				<birthplace>Praha</birthplace>
+				<birth_date>
+					<day>18</day>
+					<month>6</month>
+					<year>1979</year>
+					</birth_date>
+				<age>39</age>
+				<children_number>0</children_number>
+				<marital_status>Single</marital_status>
+				<personal_number>
+					<pn_part1>790618</pn_part1>
+					<pn_part2>0645</pn_part2>
+					</personal_number>
+				<religion>Ateist</religion>
+				<criminal_history>None</criminal_history>
+			</not_displayable_data>
+		</person_info>
+
+		<contact_info><!-->Kontaktni informace<-->
+			<adress>
+				<state>Ceska Republika</state>
+				<region>Stredocesky Kraj</region>
+				<district>Okres Kladno</district>			
+				<town>Kladno</town>
+				<street>Doberska</street>
+				<house_number>141</house_number>
+				<zip_code>272 04</zip_code>
+				</adress>
+			<phone_number preselection="+420">724427999</phone_number>
+			<personal_email sentNotifications="false">novak.j@seznam.cz</personal_email>
+			<fax>None</fax>
+			<social_profiles_URLs>
+				<facebook>https://www.facebook.com/novak.j</facebook>
+				<twitter>none</twitter>
+				<skype>none</skype>
+				<tumbIr>none</tumbIr>
+				<reddit>none</reddit>
+				<whatsapp>none</whatsapp>
+				<linkedID>none</linkedID>
+				<google>none</google>
+				<instagram>none</instagram>
+				<pinterest>none</pinterest>
+				<messenger>none</messenger>
+				<snapchat>none</snapchat>
+				</social_profiles_URLs>
+		</contact_info>
+
+	</account>
+</ACCs>

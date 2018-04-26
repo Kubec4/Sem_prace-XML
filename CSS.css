@@ -1,0 +1,33 @@
+body {
+    background-color: #ffffff;
+}
+h1
+{
+	font: "Times New Roman";
+    color: darkblue;
+    text-shadow: 3px 2px yellow;
+}
+h2
+{
+	font: "Times New Roman";
+    color: blue;
+}
+h3{
+	font: "Times New Roman";
+	color: darkblue;
+}
+
+p {
+	font: "Times New Roman";
+    color: black;
+}
+#t01 {
+	background-color: rgb(230,230,230); 
+	border: 1px solid black;
+}
+th, td {
+    padding: 2px;
+    text-align: left;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+tr:hover {background-color: #0000ff;color: white;}
